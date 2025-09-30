@@ -99,34 +99,43 @@ export default function About() {
             </div>
 
             <div className="mt-12 lg:mt-0">
-              <Card className="shadow-2xl">
-                <CardContent className="p-8">
-                  <h3 className="text-xl font-semibold text-navy mb-6">Why We're Different</h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                      <p className="text-navy-600">
-                        <strong>Golf Industry Heritage:</strong> Founded by former 
-                        golf facility executives who understand your challenges
-                      </p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                      <p className="text-navy-600">
-                        <strong>Service-First Approach:</strong> Technology that 
-                        enhances rather than replaces personal member interactions
-                      </p>
-                    </div>
-                    <div className="flex items-start">
-                      <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                      <p className="text-navy-600">
-                        <strong>Proven Implementation:</strong> Streamlined process 
-                        that minimizes disruption while maximizing results
-                      </p>
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl">
+                <img
+                  src="https://images.unsplash.com/photo-1551698618-1dfe5d97d256?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                  alt="Elegant golf course and clubhouse representing operational excellence"
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/20 to-transparent"></div>
+                
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                  <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6">
+                    <h3 className="text-xl font-semibold text-navy mb-4">Why We're Different</h3>
+                    <div className="space-y-3">
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                        <p className="text-navy-600 text-sm">
+                          <strong>Golf Industry Heritage:</strong> Founded by former 
+                          golf facility executives
+                        </p>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                        <p className="text-navy-600 text-sm">
+                          <strong>Service-First Approach:</strong> Technology that 
+                          enhances member interactions
+                        </p>
+                      </div>
+                      <div className="flex items-start">
+                        <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-4 flex-shrink-0"></div>
+                        <p className="text-navy-600 text-sm">
+                          <strong>Proven Implementation:</strong> Streamlined process 
+                          with maximum results
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             </div>
           </div>
         </div>
