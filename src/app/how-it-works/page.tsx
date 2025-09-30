@@ -186,8 +186,8 @@ export default function HowItWorks() {
                       // Browse & Order - Mobile app being used on golf course
                       <>
                         <img
-                          src="https://images.unsplash.com/photo-1556906781-146113d0d0c8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                          alt="Golfer using mobile app for ordering on the course"
+                          src="https://images.unsplash.com/photo-1591019895022-be6d1696b9a5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                          alt="Golfer using mobile phone on golf course"
                           className="w-full h-80 object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent"></div>
@@ -202,8 +202,8 @@ export default function HowItWorks() {
                       // Real-Time Tracking - Golf cart with tracking technology
                       <>
                         <img
-                          src="https://images.unsplash.com/photo-1593111774240-d529f12cf4c5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                          alt="Golf cart on pristine golf course for beverage delivery"
+                          src="https://images.unsplash.com/photo-1566923765038-ce9e6f6c7d7b?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                          alt="Golf cart on professional golf course"
                           className="w-full h-80 object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent"></div>
@@ -218,8 +218,8 @@ export default function HowItWorks() {
                       // Seamless Delivery - Professional service delivery
                       <>
                         <img
-                          src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                          alt="Professional golf course service and hospitality"
+                          src="https://images.unsplash.com/photo-1593111774240-d529f12cf4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                          alt="Professional golf course service delivery"
                           className="w-full h-80 object-cover"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent"></div>

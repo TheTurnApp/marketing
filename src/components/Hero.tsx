@@ -67,8 +67,8 @@ export function Hero() {
               {/* Professional golf clubhouse image */}
               <div className="relative overflow-hidden rounded-2xl shadow-2xl">
                 <Image
-                  src="https://images.unsplash.com/photo-1535131749006-b7f58c99034b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
-                  alt="Elegant golf clubhouse with professional service"
+                  src="https://images.unsplash.com/photo-1587174486073-ae5e5cff23aa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                  alt="Professional golf course clubhouse and facilities"
                   width={1000}
                   height={320}
                   className="w-full h-80 object-cover"
