@@ -181,11 +181,75 @@ export default function HowItWorks() {
                 </div>
 
                 <div className="lg:flex-1">
-                  <div className="bg-gradient-to-br from-navy-100 to-gold-100 rounded-2xl aspect-[4/3] flex items-center justify-center">
-                    <div className="text-center">
-                      <experience.icon className="w-16 h-16 text-navy mx-auto mb-4" />
-                      <p className="text-navy-600 font-medium">Step {experience.step} Illustration</p>
-                    </div>
+                  <div className="bg-gradient-to-br from-navy-50 to-gold-50 rounded-2xl p-8 flex items-center justify-center">
+                    {experience.step === 1 ? (
+                      // Custom SVG for Browse & Order step
+                      <div className="w-48 h-48">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                          <defs>
+                            <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                              <stop offset="0%" style={{stopColor:"#1B2951", stopOpacity:1}} />
+                              <stop offset="100%" style={{stopColor:"#3A4F83", stopOpacity:1}} />
+                            </linearGradient>
+                          </defs>
+                          
+                          {/* Minimal phone outline */}
+                          <rect x="35" y="20" width="50" height="80" rx="8" ry="8" fill="none" stroke="#1B2951" strokeWidth="2"/>
+                          
+                          {/* Screen area */}
+                          <rect x="40" y="28" width="40" height="64" rx="4" ry="4" fill="#F8F6F0"/>
+                          
+                          {/* Simple interface elements */}
+                          <rect x="44" y="35" width="32" height="2" rx="1" fill="#1B2951"/>
+                          <rect x="44" y="40" width="24" height="1.5" rx="0.5" fill="#A8B2C1"/>
+                          
+                          <rect x="44" y="48" width="32" height="2" rx="1" fill="#1B2951"/>
+                          <rect x="44" y="53" width="20" height="1.5" rx="0.5" fill="#A8B2C1"/>
+                          
+                          <rect x="44" y="61" width="32" height="2" rx="1" fill="#1B2951"/>
+                          <rect x="44" y="66" width="28" height="1.5" rx="0.5" fill="#A8B2C1"/>
+                          
+                          {/* Subtle action indicator */}
+                          <circle cx="72" cy="80" r="4" fill="#D4A574"/>
+                          <path d="M70 80 L72 82 L75 78" stroke="white" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                    ) : experience.step === 2 ? (
+                      // Custom SVG for Real-Time Tracking step
+                      <div className="w-48 h-48">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                          {/* Phone outline */}
+                          <rect x="35" y="20" width="50" height="80" rx="8" ry="8" fill="none" stroke="#1B2951" strokeWidth="2"/>
+                          
+                          {/* Screen area */}
+                          <rect x="40" y="28" width="40" height="64" rx="4" ry="4" fill="#F8F6F0"/>
+                          
+                          {/* Location pin icon */}
+                          <path d="M60 45 C55 45, 51 49, 51 54 C51 59, 60 70, 60 70 S69 59, 69 54 C69 49, 65 45, 60 45 Z" fill="#D4A574"/>
+                          
+                          {/* Pin center dot */}
+                          <circle cx="60" cy="54" r="3" fill="#1B2951"/>
+                          
+                          {/* Status indicator at bottom */}
+                          <rect x="45" y="78" width="30" height="3" rx="1.5" fill="#1B2951"/>
+                        </svg>
+                      </div>
+                    ) : experience.step === 3 ? (
+                      // Custom SVG for Seamless Delivery step
+                      <div className="w-48 h-48">
+                        <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" className="w-full h-full">
+                          {/* Simple checkmark in circle */}
+                          <circle cx="60" cy="60" r="25" fill="none" stroke="#1B2951" strokeWidth="3"/>
+                          <path d="M45 60 L55 70 L75 50" stroke="#D4A574" strokeWidth="4" fill="none" strokeLinecap="round" strokeLinejoin="round"/>
+                        </svg>
+                      </div>
+                    ) : (
+                      // Default icon for any other steps
+                      <div className="text-center">
+                        <experience.icon className="w-16 h-16 text-navy mx-auto mb-4" />
+                        <p className="text-navy-600 font-medium">Step {experience.step} Illustration</p>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
