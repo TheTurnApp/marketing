@@ -53,12 +53,12 @@ export function ContactForm() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle className="text-2xl font-display text-navy">
+        <CardTitle className="text-2xl font-display text-ink">
           Contact Our Team
         </CardTitle>
-        <p className="text-navy-600">
-          Tell us about your facility and we'll reach out to discuss how 
-          Regent can elevate your beverage service.
+        <p className="text-ink-600">
+          Tell us about your club and we'll reach out to discuss how
+          The Turn can elevate your on-course service.
         </p>
       </CardHeader>
       <CardContent>
@@ -73,7 +73,7 @@ export function ContactForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="name" className="text-navy font-medium">
+              <Label htmlFor="name" className="text-ink font-medium">
                 Name *
               </Label>
               <Input
@@ -88,7 +88,7 @@ export function ContactForm() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="email" className="text-navy font-medium">
+              <Label htmlFor="email" className="text-ink font-medium">
                 Email *
               </Label>
               <Input
@@ -106,7 +106,7 @@ export function ContactForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="phone" className="text-navy font-medium">
+              <Label htmlFor="phone" className="text-ink font-medium">
                 Phone *
               </Label>
               <Input
@@ -122,7 +122,7 @@ export function ContactForm() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="clubName" className="text-navy font-medium">
+              <Label htmlFor="clubName" className="text-ink font-medium">
                 Club/Facility Name *
               </Label>
               <Input
@@ -139,7 +139,7 @@ export function ContactForm() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div className="space-y-2">
-              <Label htmlFor="title" className="text-navy font-medium">
+              <Label htmlFor="title" className="text-ink font-medium">
                 Your Title
               </Label>
               <Input
@@ -150,7 +150,7 @@ export function ContactForm() {
             </div>
 
             <div className="space-y-2">
-              <Label htmlFor="clubSize" className="text-navy font-medium">
+              <Label htmlFor="clubSize" className="text-ink font-medium">
                 Facility Size
               </Label>
               <select
@@ -168,7 +168,7 @@ export function ContactForm() {
           </div>
 
           <div className="space-y-2">
-            <Label htmlFor="challenges" className="text-navy font-medium">
+            <Label htmlFor="challenges" className="text-ink font-medium">
               Current Challenges
             </Label>
             <Textarea

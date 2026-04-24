@@ -10,53 +10,80 @@
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-playfair);
 
-  /* Navy color palette */
-  --color-navy-50: #F0F2F8;
-  --color-navy-100: #E1E6F1;
-  --color-navy-200: #C3CCE3;
-  --color-navy-300: #A5B3D5;
-  --color-navy-400: #8799C7;
-  --color-navy-500: #6980B9;
-  --color-navy-600: #4B66AB;
-  --color-navy-700: #3A4F83;
-  --color-navy-800: #2D3C64;
-  --color-navy-900: #1B2951;
-  --color-navy: #1B2951;
+  /* Primary green — The Turn brand color */
+  --color-primary-50: #f4f9e7;
+  --color-primary-100: #e9f4d4;
+  --color-primary-200: #d4e7a9;
+  --color-primary-300: #bedb7f;
+  --color-primary-400: #a9ce55;
+  --color-primary-500: #9ecb3d;
+  --color-primary-600: #7aa32f;
+  --color-primary-700: #5f8026;
+  --color-primary-800: #426019;
+  --color-primary-900: #2c4010;
+  --color-brand: #9ecb3d;
 
-  /* Gold color palette */
-  --color-gold-50: #F9F5F0;
-  --color-gold-100: #F3EBE1;
-  --color-gold-200: #E7D7C3;
-  --color-gold-300: #DBC3A5;
-  --color-gold-400: #CFAF87;
-  --color-gold-500: #D4A574;
-  --color-gold-600: #C89558;
-  --color-gold-700: #A37A47;
-  --color-gold-800: #7D5E36;
-  --color-gold-900: #584224;
-  --color-gold: #D4A574;
+  /* Gold — warm accent for CTAs */
+  --color-gold-50: #fff4ea;
+  --color-gold-100: #ffe4ce;
+  --color-gold-200: #ffc99f;
+  --color-gold-300: #ffad70;
+  --color-gold-400: #f99654;
+  --color-gold-500: #f38e48;
+  --color-gold-600: #d97530;
+  --color-gold-700: #b35b24;
+  --color-gold-800: #8c451d;
+  --color-gold-900: #6b3517;
+  --color-gold: #f38e48;
 
-  /* Silver color palette */
-  --color-silver-50: #F6F7F9;
-  --color-silver-100: #EDEEF2;
-  --color-silver-200: #DBDEE5;
-  --color-silver-300: #C9CDD8;
-  --color-silver-400: #B7BDCB;
-  --color-silver-500: #A8B2C1;
-  --color-silver-600: #8F9BAE;
-  --color-silver-700: #6B7A92;
-  --color-silver-800: #525E71;
-  --color-silver-900: #3A424F;
-  --color-silver: #A8B2C1;
+  /* Sky — optional cool accent */
+  --color-sky-50: #eef7ff;
+  --color-sky-100: #d7ebff;
+  --color-sky-200: #b2d9ff;
+  --color-sky-300: #86c3ff;
+  --color-sky-400: #5eafff;
+  --color-sky-500: #4da6ff;
+  --color-sky-600: #1d82e6;
+  --color-sky-700: #1564b3;
+  --color-sky-800: #114e8c;
+  --color-sky-900: #0e3d70;
+  --color-sky: #4da6ff;
 
-  /* Ivory color palette */
-  --color-ivory-50: #FEFEFE;
-  --color-ivory-100: #F8F6F0;
-  --color-ivory-200: #F1EDE1;
-  --color-ivory-300: #EAE4D2;
-  --color-ivory-400: #E3DBC3;
-  --color-ivory-500: #DCD2B4;
-  --color-ivory: #F8F6F0;
+  /* Ink — dark text & surfaces */
+  --color-ink-50: #f4f6f2;
+  --color-ink-100: #e9ede5;
+  --color-ink-200: #d5dbd0;
+  --color-ink-300: #b5c0b2;
+  --color-ink-400: #94a395;
+  --color-ink-500: #768677;
+  --color-ink-600: #5b6a5e;
+  --color-ink-700: #445046;
+  --color-ink-800: #2f3730;
+  --color-ink-900: #20251f;
+  --color-ink: #20251f;
+
+  /* Silver — muted UI */
+  --color-silver-50: #f5f6f3;
+  --color-silver-100: #eceee8;
+  --color-silver-200: #dce0d7;
+  --color-silver-300: #c7ccbf;
+  --color-silver-400: #aeb3a4;
+  --color-silver-500: #93988a;
+  --color-silver-600: #757b6e;
+  --color-silver-700: #5e6359;
+  --color-silver-800: #464a43;
+  --color-silver-900: #2f322e;
+  --color-silver: #93988a;
+
+  /* Ivory — light backgrounds */
+  --color-ivory-50: #fcfdfb;
+  --color-ivory-100: #f9fbf6;
+  --color-ivory-200: #f1f6eb;
+  --color-ivory-300: #e7efd9;
+  --color-ivory-400: #dbe6c5;
+  --color-ivory-500: #c7d5a4;
+  --color-ivory: #f9fbf6;
+
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -101,37 +128,37 @@ body {
 
 :root {
   --radius: 0.625rem;
-  --background: #F8F6F0;
-  --foreground: #1B2951;
-  --card: #FFFFFF;
-  --card-foreground: #1B2951;
-  --popover: #FFFFFF;
-  --popover-foreground: #1B2951;
-  --primary: #1B2951;
-  --primary-foreground: #FFFFFF;
-  --secondary: #D4A574;
-  --secondary-foreground: #1B2951;
-  --muted: #F6F7F9;
-  --muted-foreground: #6B7A92;
-  --accent: #D4A574;
-  --accent-foreground: #1B2951;
+  --background: #f9fbf6;
+  --foreground: #20251f;
+  --card: #ffffff;
+  --card-foreground: #20251f;
+  --popover: #ffffff;
+  --popover-foreground: #20251f;
+  --primary: #7aa32f;
+  --primary-foreground: #ffffff;
+  --secondary: #f38e48;
+  --secondary-foreground: #20251f;
+  --muted: #f5f6f3;
+  --muted-foreground: #5b6a5e;
+  --accent: #f38e48;
+  --accent-foreground: #20251f;
   --destructive: oklch(0.577 0.245 27.325);
-  --border: #DBDEE5;
-  --input: #FFFFFF;
-  --ring: #1B2951;
-  --chart-1: #1B2951;
-  --chart-2: #D4A574;
-  --chart-3: #A8B2C1;
-  --chart-4: #6980B9;
-  --chart-5: #C89558;
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: #1B2951;
-  --sidebar-primary: #1B2951;
-  --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #F6F7F9;
-  --sidebar-accent-foreground: #1B2951;
-  --sidebar-border: #DBDEE5;
-  --sidebar-ring: #1B2951;
+  --border: #dce0d7;
+  --input: #ffffff;
+  --ring: #7aa32f;
+  --chart-1: #7aa32f;
+  --chart-2: #f38e48;
+  --chart-3: #93988a;
+  --chart-4: #4da6ff;
+  --chart-5: #d97530;
+  --sidebar: #ffffff;
+  --sidebar-foreground: #20251f;
+  --sidebar-primary: #7aa32f;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f5f6f3;
+  --sidebar-accent-foreground: #20251f;
+  --sidebar-border: #dce0d7;
+  --sidebar-ring: #7aa32f;
 }
 
 .dark {

@@ -11,18 +11,18 @@ export function StructuredData({ type, data }: StructuredDataProps) {
       structuredData = {
         "@context": "https://schema.org",
         "@type": "Organization",
-        "name": "Regent",
-        "description": "Operational excellence for modern golf facilities. Transform your beverage service with sophisticated on-course ordering technology.",
-        "url": "https://regentops.com",
-        "logo": "https://regentops.com/logo.png",
+        "name": "The Turn",
+        "description": "Modern on-course ordering for golf clubs. Give members a beautifully simple way to order — and your team the tools to deliver effortlessly.",
+        "url": "https://trytheturn.com",
+        "logo": "https://trytheturn.com/logo.png",
         "contactPoint": {
           "@type": "ContactPoint",
-          "email": "hello@regentops.com",
+          "email": "hello@trytheturn.com",
           "contactType": "customer service",
           "availableLanguage": "English"
         },
         "sameAs": [
-          "https://regentops.com"
+          "https://trytheturn.com"
         ]
       };
       break;
@@ -31,12 +31,12 @@ export function StructuredData({ type, data }: StructuredDataProps) {
       structuredData = {
         "@context": "https://schema.org",
         "@type": "WebSite",
-        "name": "Regent Golf Operations Platform",
-        "description": "Transform your golf facility's beverage service from outdated cart operations to sophisticated on-course ordering that matches your club's standards.",
-        "url": "https://regentops.com",
+        "name": "The Turn — On-Course Ordering",
+        "description": "Modern on-course ordering for golf clubs. Give members a beautifully simple way to order — and your team the tools to deliver effortlessly.",
+        "url": "https://trytheturn.com",
         "potentialAction": {
           "@type": "SearchAction",
-          "target": "https://regentops.com/?q={search_term_string}",
+          "target": "https://trytheturn.com/?q={search_term_string}",
           "query-input": "required name=search_term_string"
         }
       };
@@ -46,20 +46,20 @@ export function StructuredData({ type, data }: StructuredDataProps) {
       structuredData = {
         "@context": "https://schema.org",
         "@type": "Service",
-        "name": "Golf Facility Beverage Cart Operations Platform",
-        "description": "Sophisticated on-course ordering technology that elevates golf facility beverage service while maintaining premium member experience standards.",
+        "name": "Golf Club On-Course Ordering Platform",
+        "description": "Modern on-course ordering technology that elevates golf club beverage and F&B service while keeping personal service at the center.",
         "provider": {
           "@type": "Organization",
-          "name": "Regent"
+          "name": "The Turn"
         },
         "areaServed": "United States",
         "serviceType": "Golf Operations Technology",
         "offers": {
           "@type": "Offer",
-          "description": "Comprehensive golf facility beverage ordering platform with implementation and support",
+          "description": "On-course ordering platform for golf clubs with implementation and support",
           "availableAtOrFrom": {
             "@type": "Place",
-            "name": "Golf Facilities Nationwide"
+            "name": "Golf Clubs Nationwide"
           }
         }
       };

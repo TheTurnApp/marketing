@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
@@ -19,8 +20,18 @@ export function Header() {
       <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8" aria-label="Top">
         <div className="flex w-full items-center justify-between py-4">
           <div className="flex items-center">
-            <Link href="/" className="text-2xl font-display font-bold text-navy">
-              REGENT
+            <Link href="/" className="flex items-center gap-3">
+              <Image
+                src="/logo.png"
+                alt="The Turn"
+                width={40}
+                height={40}
+                className="rounded-lg"
+                priority
+              />
+              <span className="text-2xl font-display font-bold text-ink">
+                The Turn
+              </span>
             </Link>
           </div>
           
@@ -30,7 +41,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="text-navy hover:text-navy-600 transition-colors font-medium"
+                className="text-ink hover:text-ink-600 transition-colors font-medium"
               >
                 {item.name}
               </Link>
@@ -46,7 +57,7 @@ export function Header() {
               variant="ghost"
               size="sm"
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="text-navy"
+              className="text-ink"
             >
               {mobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -65,7 +76,7 @@ export function Header() {
                 <Link
                   key={item.name}
                   href={item.href}
-                  className="text-navy hover:text-navy-600 transition-colors font-medium block"
+                  className="text-ink hover:text-ink-600 transition-colors font-medium block"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   {item.name}

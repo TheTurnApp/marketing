@@ -86,7 +86,7 @@ export async function POST(request: NextRequest) {
 
     // Simulate email sending
     const emailContent = `
-New contact form submission from Regent website:
+New contact form submission from The Turn website:
 
 Name: ${name}
 Email: ${email}
@@ -104,8 +104,8 @@ IP Address: ${ip}
 
     // In production, you would send an email here:
     // await sendEmail({
-    //   to: process.env.CONTACT_TO || "hello@regentops.com",
-    //   from: process.env.CONTACT_FROM || "noreply@regentops.com",
+    //   to: process.env.CONTACT_TO || "hello@trytheturn.com",
+    //   from: process.env.CONTACT_FROM || "noreply@trytheturn.com",
     //   subject: `New Contact: ${name} from ${clubName}`,
     //   text: emailContent
     // });

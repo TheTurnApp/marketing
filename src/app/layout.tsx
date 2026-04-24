@@ -25,13 +25,13 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "Regent - Operational Excellence, Perfected",
-    template: "%s - Regent"
+    default: "The Turn — On-Course Ordering for Modern Golf Clubs",
+    template: "%s - The Turn"
   },
-  description: "Transform your golf facility's beverage service from outdated cart operations to sophisticated on-course ordering that matches your club's standards.",
+  description: "The Turn is on-course beverage and F&B ordering for golf clubs. Give members a beautifully simple way to order — and your team the tools to deliver effortlessly.",
   keywords: [
     "golf facility operations",
-    "beverage cart technology", 
+    "beverage cart technology",
     "golf course ordering system",
     "golf club management",
     "on-course beverage service",
@@ -39,24 +39,24 @@ export const metadata: Metadata = {
     "golf cart ordering app",
     "golf course technology"
   ],
-  authors: [{ name: "Regent" }],
-  creator: "Regent",
-  publisher: "Regent",
-  metadataBase: new URL("https://regentops.com"),
+  authors: [{ name: "The Turn" }],
+  creator: "The Turn",
+  publisher: "The Turn",
+  metadataBase: new URL("https://trytheturn.com"),
   alternates: {
     canonical: "/",
   },
   openGraph: {
-    title: "Regent - Operational Excellence, Perfected",
-    description: "Transform your golf facility's beverage service from outdated cart operations to sophisticated on-course ordering that matches your club's standards.",
-    url: "https://regentops.com",
-    siteName: "Regent",
+    title: "The Turn — On-Course Ordering for Modern Golf Clubs",
+    description: "On-course beverage and F&B ordering for golf clubs. Give members a beautifully simple way to order — and your team the tools to deliver effortlessly.",
+    url: "https://trytheturn.com",
+    siteName: "The Turn",
     images: [
       {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: "Regent Golf Operations Platform",
+        alt: "The Turn — On-Course Ordering",
       },
     ],
     locale: "en_US",
@@ -64,10 +64,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Regent - Operational Excellence, Perfected",
-    description: "Transform your golf facility's beverage service from outdated cart operations to sophisticated on-course ordering that matches your club's standards.",
+    title: "The Turn — On-Course Ordering for Modern Golf Clubs",
+    description: "On-course beverage and F&B ordering for golf clubs. Give members a beautifully simple way to order — and your team the tools to deliver effortlessly.",
     images: ["/og-image.png"],
-    creator: "@regent",
+    creator: "@trytheturn",
   },
   robots: {
     index: true,

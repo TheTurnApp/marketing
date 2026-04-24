@@ -15,7 +15,7 @@ export async function GET() {
       relation: ["delegate_permission/common.handle_all_urls"],
       target: {
         namespace: "android_app",
-        package_name: "com.regent.app",
+        package_name: "com.trytheturn.golfer",
         sha256_cert_fingerprints: [sha256Fingerprint],
       },
     },

@@ -5,8 +5,8 @@ import Link from "next/link";
 import { ArrowRight, Target, Users, Award, Zap } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About - Regent Golf Operations Platform",
-  description: "Learn about Regent's mission to bring operational excellence to modern golf facilities through sophisticated technology that enhances rather than replaces personal service.",
+  title: "About - The Turn",
+  description: "Learn about The Turn's mission to bring modern on-course ordering to golf clubs — technology that enhances rather than replaces personal service.",
 };
 
 export default function About() {
@@ -58,7 +58,7 @@ export default function About() {
   return (
     <div className="min-h-screen bg-ivory">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-navy to-navy-800 text-white">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-ink to-ink-800 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-display font-bold sm:text-5xl lg:text-6xl">
@@ -66,7 +66,7 @@ export default function About() {
               <span className="text-gold">Modern Golf</span>
             </h1>
             <p className="mt-6 text-xl text-silver-300 max-w-3xl mx-auto">
-              Regent was founded on the belief that golf facilities deserve 
+              The Turn was founded on the belief that golf facilities deserve 
               technology as sophisticated as the experiences they provide.
             </p>
           </div>
@@ -78,20 +78,20 @@ export default function About() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="lg:grid lg:grid-cols-2 lg:gap-16 lg:items-center">
             <div>
-              <h2 className="text-3xl font-display font-bold text-navy sm:text-4xl">
+              <h2 className="text-3xl font-display font-bold text-ink sm:text-4xl">
                 Our Mission
               </h2>
-              <p className="mt-6 text-lg text-navy-600">
+              <p className="mt-6 text-lg text-ink-600">
                 We transform golf facility operations through sophisticated technology 
                 that enhances rather than replaces the personal service that defines 
                 premium golf experiences.
               </p>
-              <p className="mt-4 text-lg text-navy-600">
+              <p className="mt-4 text-lg text-ink-600">
                 Founded by golf industry veterans who understand the unique challenges 
-                of managing premium facilities, Regent bridges the gap between 
+                of managing premium facilities, The Turn bridges the gap between 
                 operational efficiency and member satisfaction.
               </p>
-              <p className="mt-4 text-lg text-navy-600">
+              <p className="mt-4 text-lg text-ink-600">
                 Every feature we build is guided by a deep understanding of golf 
                 culture, service standards, and the operational realities of 
                 running a successful facility.
@@ -105,29 +105,29 @@ export default function About() {
                   alt="Professional golf course clubhouse representing operational excellence"
                   className="w-full h-96 object-cover"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/60 via-navy/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/60 via-ink/20 to-transparent"></div>
                 
                 <div className="absolute bottom-0 left-0 right-0 p-8">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl p-6">
-                    <h3 className="text-xl font-semibold text-navy mb-4">Why We're Different</h3>
+                    <h3 className="text-xl font-semibold text-ink mb-4">Why We're Different</h3>
                     <div className="space-y-3">
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                        <p className="text-navy-600 text-sm">
+                        <p className="text-ink-600 text-sm">
                           <strong>Golf Industry Heritage:</strong> Founded by former 
                           golf facility executives
                         </p>
                       </div>
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                        <p className="text-navy-600 text-sm">
+                        <p className="text-ink-600 text-sm">
                           <strong>Service-First Approach:</strong> Technology that 
                           enhances member interactions
                         </p>
                       </div>
                       <div className="flex items-start">
                         <div className="w-2 h-2 bg-gold rounded-full mt-2 mr-4 flex-shrink-0"></div>
-                        <p className="text-navy-600 text-sm">
+                        <p className="text-ink-600 text-sm">
                           <strong>Proven Implementation:</strong> Streamlined process 
                           with maximum results
                         </p>
@@ -142,13 +142,13 @@ export default function About() {
       </section>
 
       {/* Values Section */}
-      <section className="py-16 lg:py-24 bg-navy-50">
+      <section className="py-16 lg:py-24 bg-ink-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-display font-bold text-navy sm:text-4xl">
+            <h2 className="text-3xl font-display font-bold text-ink sm:text-4xl">
               Our Values
             </h2>
-            <p className="mt-4 text-lg text-navy-600 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-ink-600 max-w-3xl mx-auto">
               The principles that guide everything we build and every 
               relationship we foster.
             </p>
@@ -158,13 +158,13 @@ export default function About() {
             {values.map((value, index) => (
               <Card key={index} className="border-silver-200 shadow-lg">
                 <CardContent className="p-8">
-                  <div className="flex items-center justify-center w-12 h-12 bg-navy rounded-xl mb-6">
+                  <div className="flex items-center justify-center w-12 h-12 bg-ink rounded-xl mb-6">
                     <value.icon className="h-6 w-6 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-navy mb-4">
+                  <h3 className="text-xl font-semibold text-ink mb-4">
                     {value.title}
                   </h3>
-                  <p className="text-navy-600">
+                  <p className="text-ink-600">
                     {value.description}
                   </p>
                 </CardContent>
@@ -178,7 +178,7 @@ export default function About() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-display font-bold text-navy sm:text-4xl">
+            <h2 className="text-3xl font-display font-bold text-ink sm:text-4xl">
               Results That Speak for Themselves
             </h2>
           </div>
@@ -186,10 +186,10 @@ export default function About() {
           <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-4xl font-display font-bold text-navy mb-2">
+                <div className="text-4xl font-display font-bold text-ink mb-2">
                   {stat.value}
                 </div>
-                <div className="text-navy-600">
+                <div className="text-ink-600">
                   {stat.label}
                 </div>
               </div>
@@ -199,13 +199,13 @@ export default function About() {
       </section>
 
       {/* Team Section */}
-      <section className="py-16 lg:py-24 bg-navy-50">
+      <section className="py-16 lg:py-24 bg-ink-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-display font-bold text-navy sm:text-4xl">
-              The Team Behind Regent
+            <h2 className="text-3xl font-display font-bold text-ink sm:text-4xl">
+              The Team Behind The Turn
             </h2>
-            <p className="mt-4 text-lg text-navy-600 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-ink-600 max-w-3xl mx-auto">
               Golf industry veterans and technology experts dedicated to your success.
             </p>
           </div>
@@ -214,13 +214,13 @@ export default function About() {
             {team.map((member, index) => (
               <Card key={index} className="border-silver-200">
                 <CardContent className="p-8 text-center">
-                  <div className="w-16 h-16 bg-navy rounded-full mx-auto mb-6 flex items-center justify-center">
+                  <div className="w-16 h-16 bg-ink rounded-full mx-auto mb-6 flex items-center justify-center">
                     <Users className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-xl font-semibold text-navy mb-4">
+                  <h3 className="text-xl font-semibold text-ink mb-4">
                     {member.name}
                   </h3>
-                  <p className="text-navy-600">
+                  <p className="text-ink-600">
                     {member.description}
                   </p>
                 </CardContent>
@@ -234,16 +234,16 @@ export default function About() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-display font-bold text-navy sm:text-4xl">
+            <h2 className="text-3xl font-display font-bold text-ink sm:text-4xl">
               Our Commitment to Excellence
             </h2>
-            <p className="mt-6 text-lg text-navy-600 max-w-4xl mx-auto">
+            <p className="mt-6 text-lg text-ink-600 max-w-4xl mx-auto">
               We're not just a technology provider—we're your partner in operational 
               excellence. From implementation through ongoing optimization, we're 
-              committed to ensuring Regent delivers measurable value to your facility 
+              committed to ensuring The Turn delivers measurable value to your facility 
               and exceptional experiences for your members.
             </p>
-            <p className="mt-4 text-lg text-navy-600 max-w-4xl mx-auto">
+            <p className="mt-4 text-lg text-ink-600 max-w-4xl mx-auto">
               Every facility is unique, and our approach reflects that understanding. 
               We work closely with your team to ensure seamless integration with 
               your existing operations and service standards.
@@ -253,14 +253,14 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-navy">
+      <section className="py-16 lg:py-24 bg-ink">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-display font-bold text-white sm:text-4xl">
             Ready to Experience Operational Excellence?
           </h2>
           <p className="mt-4 text-lg text-silver-300 max-w-3xl mx-auto">
             Join the growing community of golf facilities that have transformed 
-            their beverage service with Regent.
+            their beverage service with The Turn.
           </p>
           
           <div className="mt-8 flex flex-col sm:flex-row gap-4 justify-center">
@@ -270,7 +270,7 @@ export default function About() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-navy">
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-ink">
               <Link href="/how-it-works">
                 See How It Works
               </Link>

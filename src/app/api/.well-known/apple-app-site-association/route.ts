@@ -2,7 +2,7 @@ import { NextResponse } from "next/server";
 
 export async function GET() {
   const teamId = process.env.APPLE_TEAM_ID;
-  const bundleId = process.env.APPLE_BUNDLE_ID || "com.regent.app";
+  const bundleId = process.env.APPLE_BUNDLE_ID || "com.trytheturn.golfer";
 
   if (!teamId) {
     return NextResponse.json(

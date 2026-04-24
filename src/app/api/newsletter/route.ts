@@ -88,7 +88,7 @@ export async function POST(request: NextRequest) {
     //     body: JSON.stringify({
     //       api_key: process.env.CONVERTKIT_API_KEY,
     //       email: email,
-    //       tags: ['regent-website']
+    //       tags: ['the-turn-website']
     //     })
     //   });
     // }
