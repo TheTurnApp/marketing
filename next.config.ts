@@ -1,25 +1,15 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: "https",
         hostname: "images.unsplash.com",
       },
     ],
-  },
-  async rewrites() {
-    return [
-      {
-        source: "/.well-known/assetlinks.json",
-        destination: "/api/.well-known/assetlinks.json",
-      },
-      {
-        source: "/.well-known/apple-app-site-association",
-        destination: "/api/.well-known/apple-app-site-association",
-      },
-    ];
   },
 };
 

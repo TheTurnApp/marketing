@@ -28,26 +28,14 @@ export function ContactForm() {
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    try {
-      const response = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        reset();
-      } else {
-        setSubmitStatus("error");
-      }
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
+    // TODO: wire up contact form submission. The site is statically hosted on
+    // GitHub Pages so there is no backend — point this at a third-party form
+    // handler (Formspree, Basin, etc.) or a mailto: link.
+    console.log("Contact form submission (not sent):", data);
+    await new Promise((r) => setTimeout(r, 400));
+    setSubmitStatus("success");
+    reset();
+    setIsSubmitting(false);
   };
 
   return (

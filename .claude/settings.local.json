@@ -4,7 +4,19 @@
       "Bash(npx create-next-app:*)",
       "Bash(npm install:*)",
       "Bash(npx:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(xargs -0 sed -i '' -e 's/\\\\\\([a-z:-]*\\\\\\)navy-\\\\\\([0-9]\\\\+\\\\\\)/\\\\1ink-\\\\2/g' -e 's/-navy\\\\b/-ink/g' -e 's/from-navy\\\\b/from-ink/g' -e 's/to-navy\\\\b/to-ink/g' -e 's/text-navy\\\\b/text-ink/g' -e 's/bg-navy\\\\b/bg-ink/g' -e 's/border-navy\\\\b/border-ink/g' -e 's/ring-navy\\\\b/ring-ink/g' -e 's/hover:text-navy\\\\b/hover:text-ink/g' -e 's/hover:bg-navy\\\\b/hover:bg-ink/g')",
+      "Bash(xargs -0 sed -i '' -e s/text-navy-/text-ink-/g -e s/bg-navy-/bg-ink-/g -e s/border-navy-/border-ink-/g -e s/from-navy-/from-ink-/g -e s/to-navy-/to-ink-/g -e s/via-navy-/via-ink-/g -e s/ring-navy-/ring-ink-/g -e 's/text-navy\"/text-ink\"/g' -e 's/bg-navy\"/bg-ink\"/g' -e 's/border-navy\"/border-ink\"/g' -e 's/text-navy /text-ink /g' -e 's/bg-navy /bg-ink /g' -e 's/border-navy /border-ink /g' -e 's/from-navy /from-ink /g' -e 's/to-navy /to-ink /g' -e 's/hover:text-navy\"/hover:text-ink\"/g' -e 's/hover:bg-navy\"/hover:bg-ink\"/g' -e 's/hover:text-navy /hover:text-ink /g' -e 's/hover:bg-navy /hover:bg-ink /g')",
+      "Bash(xargs -0 sed -i '' -e 's/from-navy\\\\//from-ink\\\\//g' -e 's/to-navy\\\\//to-ink\\\\//g' -e 's/via-navy\\\\//via-ink\\\\//g' -e 's/bg-navy\\\\//bg-ink\\\\//g')",
+      "Bash(cp /Users/adamtyler/repos/regentops/monorepo/apps/golfer/assets/icon.png /Users/adamtyler/repos/regentops/marketing/public/logo.png)",
+      "Bash(cp /Users/adamtyler/repos/regentops/monorepo/apps/golfer/assets/icon.png /Users/adamtyler/repos/regentops/marketing/src/app/icon.png)",
+      "Bash(cp /Users/adamtyler/repos/regentops/monorepo/apps/golfer/assets/icon.png /Users/adamtyler/repos/regentops/marketing/src/app/apple-icon.png)",
+      "Bash(git checkout *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)",
+      "Bash(gh pr *)",
+      "Bash(git check-ignore *)"
     ],
     "deny": [],
     "ask": []

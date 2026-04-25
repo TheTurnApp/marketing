@@ -80,15 +80,23 @@ Open [http://localhost:3000](http://localhost:3000).
 
 | Name                        | Purpose                                    |
 | --------------------------- | ------------------------------------------ |
-| `APPLE_TEAM_ID`             | Apple team ID, for `apple-app-site-association` |
-| `APPLE_BUNDLE_ID`           | iOS bundle id (defaults to `com.trytheturn.golfer`) |
-| `ANDROID_SHA256_FINGERPRINT`| Android signing cert fingerprint, for `assetlinks.json` |
 | `NEXT_PUBLIC_MEETING_URL`   | Calendly (or similar) embed URL            |
-| `CONTACT_TO` / `CONTACT_FROM` | Contact form email routing (when wired to an email provider) |
 
 ## Deployment
 
-Deploys on Vercel. Domain: `trytheturn.com`.
+Static export to GitHub Pages. Domain: `trytheturn.com`.
+
+`npm run build` produces `out/`, which is published by `.github/workflows/deploy.yml` on every push to `main`.
+
+### One-time setup
+
+1. In repo Settings → Pages, set **Source** to "GitHub Actions".
+2. Point DNS for `trytheturn.com` at GitHub Pages (`A` records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`, plus `AAAA` for IPv6 if desired). The `public/CNAME` file in this repo handles the GitHub side.
+3. Fill in real values in `public/.well-known/apple-app-site-association` (Apple Team ID) and `public/.well-known/assetlinks.json` (Android SHA256 fingerprint) before deeplinking will work.
+
+### TODOs
+
+- `ContactForm.tsx` and `NewsletterForm.tsx` log submissions to the console — wire to a third-party form handler (Formspree, Basin) or mailing service (ConvertKit, Mailchimp) before launch.
 
 ## Scripts
 

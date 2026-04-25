@@ -25,26 +25,13 @@ export function NewsletterForm() {
     setIsSubmitting(true);
     setSubmitStatus("idle");
 
-    try {
-      const response = await fetch("/api/newsletter", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
-
-      if (response.ok) {
-        setSubmitStatus("success");
-        reset();
-      } else {
-        setSubmitStatus("error");
-      }
-    } catch {
-      setSubmitStatus("error");
-    } finally {
-      setIsSubmitting(false);
-    }
+    // TODO: wire up newsletter signup. The site is statically hosted on GitHub
+    // Pages so there is no backend — point this at ConvertKit/Mailchimp/etc.
+    console.log("Newsletter signup (not sent):", data);
+    await new Promise((r) => setTimeout(r, 400));
+    setSubmitStatus("success");
+    reset();
+    setIsSubmitting(false);
   };
 
   if (submitStatus === "success") {
