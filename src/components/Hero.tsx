@@ -11,14 +11,13 @@ export function Hero() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="lg:grid lg:grid-cols-12 lg:gap-8">
           <div className="sm:text-center md:max-w-2xl md:mx-auto lg:col-span-6 lg:text-left">
-            <h1 className="text-4xl font-display font-bold tracking-tight text-navy sm:text-5xl lg:text-6xl">
-              Operational Excellence,{" "}
-              <span className="text-gold">Perfected</span>
+            <h1 className="text-4xl font-display font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
+              The modern way to{" "}
+              <span className="text-primary-600">make the turn</span>
             </h1>
-            <p className="mt-6 text-xl text-navy-700 lg:text-lg xl:text-xl">
-              Transform your golf facility's beverage service from outdated cart 
-              operations to sophisticated on-course ordering that matches your 
-              club's standards.
+            <p className="mt-6 text-xl text-ink-700 lg:text-lg xl:text-xl">
+              On-course ordering built for golf clubs. Members order in a tap.
+              Staff deliver with calm, and the cart always knows where to go.
             </p>
             
             <div className="mt-8 sm:max-w-lg sm:mx-auto sm:text-center lg:text-left lg:mx-0">
@@ -33,7 +32,7 @@ export function Hero() {
                   asChild 
                   variant="outline" 
                   size="lg" 
-                  className="text-lg px-8 py-3 border-navy text-navy hover:bg-navy hover:text-white"
+                  className="text-lg px-8 py-3 border-ink text-ink hover:bg-ink hover:text-white"
                 >
                   <Link href="#download">
                     Download One-Pager
@@ -47,16 +46,16 @@ export function Hero() {
             <div className="mt-12">
               <div className="grid grid-cols-3 gap-4 text-center lg:text-left">
                 <div>
-                  <div className="text-2xl font-bold text-navy">30%</div>
-                  <div className="text-sm text-navy-600">Average Revenue Boost</div>
+                  <div className="text-2xl font-bold text-ink">30%</div>
+                  <div className="text-sm text-ink-600">Average Revenue Boost</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-navy">2-3 weeks</div>
-                  <div className="text-sm text-navy-600">Implementation Time</div>
+                  <div className="text-2xl font-bold text-ink">2-3 weeks</div>
+                  <div className="text-sm text-ink-600">Implementation Time</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-navy">90%+</div>
-                  <div className="text-sm text-navy-600">Member Satisfaction</div>
+                  <div className="text-2xl font-bold text-ink">90%+</div>
+                  <div className="text-sm text-ink-600">Member Satisfaction</div>
                 </div>
               </div>
             </div>
@@ -74,18 +73,22 @@ export function Hero() {
                   className="w-full h-80 object-cover"
                   priority
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-ink/20 to-transparent"></div>
                 
                 {/* Overlay content */}
                 <div className="absolute bottom-6 left-6 right-6">
                   <div className="bg-white/95 backdrop-blur-sm rounded-xl p-4 shadow-lg">
                     <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-navy rounded-lg flex items-center justify-center">
-                        <span className="text-white font-bold text-sm">R</span>
-                      </div>
+                      <Image
+                        src="/logo.png"
+                        alt="The Turn"
+                        width={40}
+                        height={40}
+                        className="rounded-lg"
+                      />
                       <div>
-                        <p className="font-semibold text-navy">Mobile Ordering</p>
-                        <p className="text-sm text-navy-600">Premium Service Technology</p>
+                        <p className="font-semibold text-ink">The Turn</p>
+                        <p className="text-sm text-ink-600">On-course ordering, simplified</p>
                       </div>
                     </div>
                   </div>

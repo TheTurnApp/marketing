@@ -5,8 +5,8 @@ import Link from "next/link";
 import { ArrowRight, Settings, Menu, Smartphone, TrendingUp, Users, MapPin } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "How It Works - Regent Golf Operations Platform",
-  description: "Learn how Regent transforms golf facility beverage service in just 2-3 weeks with our sophisticated on-course ordering platform.",
+  title: "How It Works - The Turn",
+  description: "Learn how The Turn transforms golf club beverage service in just 2-3 weeks with our modern on-course ordering platform.",
 };
 
 export default function HowItWorks() {
@@ -73,7 +73,7 @@ export default function HowItWorks() {
   return (
     <div className="min-h-screen bg-ivory">
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-navy to-navy-800 text-white">
+      <section className="py-16 lg:py-24 bg-gradient-to-br from-ink to-ink-800 text-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h1 className="text-4xl font-display font-bold sm:text-5xl lg:text-6xl">
@@ -92,10 +92,10 @@ export default function HowItWorks() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-display font-bold text-navy sm:text-4xl">
+            <h2 className="text-3xl font-display font-bold text-ink sm:text-4xl">
               Implementation Process
             </h2>
-            <p className="mt-4 text-lg text-navy-600 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-ink-600 max-w-3xl mx-auto">
               Our streamlined approach ensures rapid deployment without disrupting 
               your current operations.
             </p>
@@ -105,25 +105,25 @@ export default function HowItWorks() {
             {implementationSteps.map((step, index) => (
               <Card key={index} className="border-silver-200 shadow-lg relative">
                 <CardContent className="p-8">
-                  <div className="flex items-center justify-center w-16 h-16 bg-navy rounded-xl mb-6">
+                  <div className="flex items-center justify-center w-16 h-16 bg-ink rounded-xl mb-6">
                     <step.icon className="h-8 w-8 text-white" />
                   </div>
                   
-                  <div className="bg-gold text-navy text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
+                  <div className="bg-gold text-ink text-sm font-semibold px-3 py-1 rounded-full inline-block mb-4">
                     {step.week}
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-navy mb-4">
+                  <h3 className="text-xl font-semibold text-ink mb-4">
                     {step.title}
                   </h3>
                   
-                  <p className="text-navy-600 mb-6">
+                  <p className="text-ink-600 mb-6">
                     {step.description}
                   </p>
 
                   <ul className="space-y-2">
                     {step.details.map((detail, detailIndex) => (
-                      <li key={detailIndex} className="flex items-start text-sm text-navy-600">
+                      <li key={detailIndex} className="flex items-start text-sm text-ink-600">
                         <div className="w-1.5 h-1.5 bg-gold rounded-full mt-2 mr-3 flex-shrink-0"></div>
                         {detail}
                       </li>
@@ -137,13 +137,13 @@ export default function HowItWorks() {
       </section>
 
       {/* Member Experience Flow */}
-      <section className="py-16 lg:py-24 bg-navy-50">
+      <section className="py-16 lg:py-24 bg-ink-50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-display font-bold text-navy sm:text-4xl">
+            <h2 className="text-3xl font-display font-bold text-ink sm:text-4xl">
               Member Experience Flow
             </h2>
-            <p className="mt-4 text-lg text-navy-600 max-w-3xl mx-auto">
+            <p className="mt-4 text-lg text-ink-600 max-w-3xl mx-auto">
               A seamless ordering experience that enhances rather than replaces 
               the personal service your members value.
             </p>
@@ -161,19 +161,19 @@ export default function HowItWorks() {
                   <Card className="shadow-lg">
                     <CardContent className="p-8">
                       <div className="flex items-center mb-6">
-                        <div className="w-12 h-12 bg-navy rounded-xl flex items-center justify-center mr-4">
+                        <div className="w-12 h-12 bg-ink rounded-xl flex items-center justify-center mr-4">
                           <experience.icon className="h-6 w-6 text-white" />
                         </div>
                         <div className="w-8 h-8 bg-gold rounded-full flex items-center justify-center">
-                          <span className="text-navy font-bold text-sm">{experience.step}</span>
+                          <span className="text-ink font-bold text-sm">{experience.step}</span>
                         </div>
                       </div>
                       
-                      <h3 className="text-2xl font-display font-bold text-navy mb-4">
+                      <h3 className="text-2xl font-display font-bold text-ink mb-4">
                         {experience.title}
                       </h3>
                       
-                      <p className="text-navy-600 text-lg">
+                      <p className="text-ink-600 text-lg">
                         {experience.description}
                       </p>
                     </CardContent>
@@ -190,11 +190,11 @@ export default function HowItWorks() {
                           alt="Golfer using mobile phone on golf course"
                           className="w-full h-80 object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-ink/30 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 right-4">
                           <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3">
-                            <p className="font-semibold text-navy text-sm">Mobile Ordering Interface</p>
-                            <p className="text-xs text-navy-600">Browse menu & place orders</p>
+                            <p className="font-semibold text-ink text-sm">Mobile Ordering Interface</p>
+                            <p className="text-xs text-ink-600">Browse menu & place orders</p>
                           </div>
                         </div>
                       </>
@@ -206,11 +206,11 @@ export default function HowItWorks() {
                           alt="Golf cart on professional golf course"
                           className="w-full h-80 object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-ink/30 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 right-4">
                           <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3">
-                            <p className="font-semibold text-navy text-sm">Live Cart Tracking</p>
-                            <p className="text-xs text-navy-600">Real-time location updates</p>
+                            <p className="font-semibold text-ink text-sm">Live Cart Tracking</p>
+                            <p className="text-xs text-ink-600">Real-time location updates</p>
                           </div>
                         </div>
                       </>
@@ -222,19 +222,19 @@ export default function HowItWorks() {
                           alt="Professional golf course service delivery"
                           className="w-full h-80 object-cover"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-navy/30 to-transparent"></div>
+                        <div className="absolute inset-0 bg-gradient-to-t from-ink/30 to-transparent"></div>
                         <div className="absolute bottom-4 left-4 right-4">
                           <div className="bg-white/95 backdrop-blur-sm rounded-lg p-3">
-                            <p className="font-semibold text-navy text-sm">Premium Service</p>
-                            <p className="text-xs text-navy-600">Professional delivery experience</p>
+                            <p className="font-semibold text-ink text-sm">Premium Service</p>
+                            <p className="text-xs text-ink-600">Professional delivery experience</p>
                           </div>
                         </div>
                       </>
                     ) : (
                       // Default for any other steps
-                      <div className="bg-gradient-to-br from-navy-50 to-gold-50 p-8 flex items-center justify-center text-center">
-                        <experience.icon className="w-16 h-16 text-navy mx-auto mb-4" />
-                        <p className="text-navy-600 font-medium">Step {experience.step}</p>
+                      <div className="bg-gradient-to-br from-ink-50 to-gold-50 p-8 flex items-center justify-center text-center">
+                        <experience.icon className="w-16 h-16 text-ink mx-auto mb-4" />
+                        <p className="text-ink-600 font-medium">Step {experience.step}</p>
                       </div>
                     )}
                   </div>
@@ -249,17 +249,17 @@ export default function HowItWorks() {
       <section className="py-16 lg:py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-display font-bold text-navy sm:text-4xl">
-              Why Golf Facilities Choose Regent
+            <h2 className="text-3xl font-display font-bold text-ink sm:text-4xl">
+              Why Clubs Choose The Turn
             </h2>
           </div>
 
           <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="text-center border-silver-200">
               <CardContent className="p-8">
-                <div className="text-4xl font-display font-bold text-navy mb-2">30%</div>
-                <div className="text-navy-600 mb-4">Average Revenue Increase</div>
-                <p className="text-sm text-navy-500">
+                <div className="text-4xl font-display font-bold text-ink mb-2">30%</div>
+                <div className="text-ink-600 mb-4">Average Revenue Increase</div>
+                <p className="text-sm text-ink-500">
                   Direct-to-consumer ordering increases frequency and order values
                 </p>
               </CardContent>
@@ -267,9 +267,9 @@ export default function HowItWorks() {
 
             <Card className="text-center border-silver-200">
               <CardContent className="p-8">
-                <div className="text-4xl font-display font-bold text-navy mb-2">2-3</div>
-                <div className="text-navy-600 mb-4">Weeks Implementation</div>
-                <p className="text-sm text-navy-500">
+                <div className="text-4xl font-display font-bold text-ink mb-2">2-3</div>
+                <div className="text-ink-600 mb-4">Weeks Implementation</div>
+                <p className="text-sm text-ink-500">
                   Rapid deployment without disrupting current operations
                 </p>
               </CardContent>
@@ -277,9 +277,9 @@ export default function HowItWorks() {
 
             <Card className="text-center border-silver-200">
               <CardContent className="p-8">
-                <div className="text-4xl font-display font-bold text-navy mb-2">90%+</div>
-                <div className="text-navy-600 mb-4">Member Satisfaction</div>
-                <p className="text-sm text-navy-500">
+                <div className="text-4xl font-display font-bold text-ink mb-2">90%+</div>
+                <div className="text-ink-600 mb-4">Member Satisfaction</div>
+                <p className="text-sm text-ink-500">
                   Enhanced convenience without sacrificing personal service
                 </p>
               </CardContent>
@@ -289,13 +289,13 @@ export default function HowItWorks() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-navy">
+      <section className="py-16 lg:py-24 bg-ink">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-display font-bold text-white sm:text-4xl">
             Ready to Transform Your Beverage Service?
           </h2>
           <p className="mt-4 text-lg text-silver-300 max-w-3xl mx-auto">
-            Schedule a consultation to learn how Regent can elevate your 
+            Schedule a consultation to learn how The Turn can elevate your 
             facility's operations in just 2-3 weeks.
           </p>
           
@@ -306,7 +306,7 @@ export default function HowItWorks() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Link>
             </Button>
-            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-navy">
+            <Button asChild size="lg" variant="outline" className="text-lg px-8 py-3 border-white text-white hover:bg-white hover:text-ink">
               <Link href="/about">
                 Learn About Us
               </Link>
