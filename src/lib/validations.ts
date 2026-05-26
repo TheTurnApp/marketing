@@ -16,5 +16,13 @@ export const newsletterSchema = z.object({
   honeypot: z.string().max(0, "Bot detected"), // Anti-spam honeypot
 });
 
+export const deleteAccountSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z.string().email("Please enter the email tied to your account"),
+  reason: z.string().optional(),
+  honeypot: z.string().max(0, "Bot detected"),
+});
+
 export type ContactFormData = z.infer<typeof contactFormSchema>;
 export type NewsletterData = z.infer<typeof newsletterSchema>;
+export type DeleteAccountData = z.infer<typeof deleteAccountSchema>;
