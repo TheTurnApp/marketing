@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 };
 
 export default function Privacy() {
-  const lastUpdated = "May 26, 2026";
+  const lastUpdated = "May 27, 2026";
 
   return (
     <div className="min-h-screen bg-ivory">
@@ -65,17 +65,40 @@ export default function Privacy() {
                 </h3>
                 <ul className="list-disc pl-6 space-y-2 text-ink-600">
                   <li>
-                    <strong>Account Information:</strong> Name, email address, phone
-                    number, club or facility affiliation, and password.
+                    <strong>Account Information:</strong> Name, email address, club or
+                    facility affiliation, and password.
+                  </li>
+                  <li>
+                    <strong>Phone Number:</strong> We collect your mobile phone number
+                    to send SMS one-time passcodes (OTPs) for sign-in and account
+                    verification, and to confirm your identity when you place orders.
+                    Standard message and data rates may apply. You can stop receiving
+                    SMS messages at any time by replying STOP, though this may prevent
+                    you from signing in.
                   </li>
                   <li>
                     <strong>Order Information:</strong> Items purchased, delivery
-                    location on course, payment details, and order history.
+                    location on course, order notes, and order history.
                   </li>
                   <li>
-                    <strong>Payment Information:</strong> Credit card or other payment
-                    details, processed securely through our payment processors. We do
-                    not store full payment card numbers on our servers.
+                    <strong>Payment Information:</strong> Payments are processed
+                    securely by Stripe, our third-party payment processor. Stripe
+                    collects your card number, expiration date, CVC, and billing
+                    details directly. We do not store full payment card numbers,
+                    expiration dates, or CVCs on our servers. We retain only a payment
+                    token issued by Stripe and limited metadata (such as the last four
+                    digits and card brand) to display your saved payment methods and
+                    reconcile transactions. Stripe's handling of your payment data is
+                    governed by its{" "}
+                    <a
+                      href="https://stripe.com/privacy"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-ink underline hover:text-gold transition-colors"
+                    >
+                      privacy policy
+                    </a>
+                    .
                   </li>
                   <li>
                     <strong>Communications:</strong> Messages, support requests, and
@@ -92,17 +115,58 @@ export default function Privacy() {
                     browser type, and unique device identifiers.
                   </li>
                   <li>
-                    <strong>Usage Data:</strong> Pages viewed, features used, time
-                    spent, and interaction patterns.
+                    <strong>Push Notification Tokens:</strong> If you grant push
+                    notification permission, we collect a device push token issued by
+                    Apple Push Notification service (APNs) or Firebase Cloud Messaging
+                    (FCM) so we can deliver order updates and account notifications to
+                    your device.
                   </li>
                   <li>
-                    <strong>Location Data:</strong> With your permission, we may
-                    collect precise location data to identify your position on the
-                    course for order delivery.
+                    <strong>Usage Data:</strong> Pages and screens viewed, features
+                    used, buttons tapped, time spent, and interaction patterns. See
+                    Section 7 for details on analytics events.
                   </li>
                   <li>
                     <strong>Cookies and Similar Technologies:</strong> We use cookies
                     and similar tracking technologies to enhance your experience.
+                  </li>
+                </ul>
+
+                <h3 className="text-xl font-semibold text-ink mt-6 mb-3">
+                  Location Information
+                </h3>
+                <p className="text-ink-600 mb-4">
+                  The Turn uses location information differently depending on whether
+                  you are a member placing an order or a member of the delivery staff
+                  fulfilling orders. We collect location data only with your permission,
+                  and you can change or revoke this permission at any time through your
+                  device settings.
+                </p>
+                <ul className="list-disc pl-6 space-y-2 text-ink-600">
+                  <li>
+                    <strong>Members (foreground, while ordering):</strong> When you
+                    place an order, we collect your precise device location while the
+                    app is in use to identify your position on the course (hole,
+                    fairway, cart path, or other on-course coordinates) so the facility
+                    can deliver to you. We do not track your location in the background
+                    or when you are not actively ordering.
+                  </li>
+                  <li>
+                    <strong>Delivery Staff (background, during shifts):</strong> If you
+                    are a driver, beverage cart attendant, or other delivery staff
+                    member, the app collects your precise location continuously,
+                    including in the background, while you are clocked in to a shift.
+                    This is used to route orders, dispatch deliveries, provide accurate
+                    ETAs to members, and confirm hand-off. Background location
+                    collection stops when you clock out of your shift or revoke
+                    permission. Driver location data is shared with the golf facility
+                    that employs you and with members who have an active order awaiting
+                    delivery.
+                  </li>
+                  <li>
+                    <strong>Approximate Location from IP:</strong> Regardless of device
+                    permission, our analytics and security systems may derive
+                    approximate location (typically city-level) from your IP address.
                   </li>
                 </ul>
               </div>
@@ -148,8 +212,11 @@ export default function Privacy() {
                   </li>
                   <li>
                     <strong>With Service Providers:</strong> We share information with
-                    third-party vendors who perform services on our behalf, such as
-                    payment processing, hosting, analytics, and customer support.
+                    third-party vendors who perform services on our behalf, including
+                    Stripe (payment processing), PostHog (product analytics), Apple
+                    Push Notification service and Firebase Cloud Messaging (push
+                    notification delivery), and providers we use for hosting, SMS
+                    delivery, and customer support.
                   </li>
                   <li>
                     <strong>For Legal Reasons:</strong> We may disclose information if
@@ -354,7 +421,138 @@ export default function Privacy() {
 
               <div>
                 <h2 className="text-2xl font-display font-bold text-ink mb-4">
-                  10. Children's Privacy
+                  10. Mobile App Data Disclosures
+                </h2>
+                <p className="text-ink-600 mb-4">
+                  The summary below describes the categories of data our mobile apps
+                  collect and how they are used, consistent with our App Privacy
+                  disclosures on the Apple App Store and our Data Safety disclosures
+                  on the Google Play Store.
+                </p>
+                <div className="overflow-x-auto">
+                  <table className="min-w-full border border-silver-200 rounded-lg text-sm">
+                    <thead className="bg-ink-50">
+                      <tr>
+                        <th className="text-left px-4 py-3 font-semibold text-ink border-b border-silver-200">
+                          Data Type
+                        </th>
+                        <th className="text-left px-4 py-3 font-semibold text-ink border-b border-silver-200">
+                          Purpose
+                        </th>
+                        <th className="text-left px-4 py-3 font-semibold text-ink border-b border-silver-200">
+                          Linked to You
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="text-ink-600">
+                      <tr className="border-b border-silver-200">
+                        <td className="px-4 py-3 align-top">
+                          Contact info (name, email)
+                        </td>
+                        <td className="px-4 py-3 align-top">
+                          App functionality, customer support, account management
+                        </td>
+                        <td className="px-4 py-3 align-top">Yes</td>
+                      </tr>
+                      <tr className="border-b border-silver-200">
+                        <td className="px-4 py-3 align-top">
+                          Phone number
+                        </td>
+                        <td className="px-4 py-3 align-top">
+                          Authentication via SMS OTP, identity verification, order
+                          confirmation
+                        </td>
+                        <td className="px-4 py-3 align-top">Yes</td>
+                      </tr>
+                      <tr className="border-b border-silver-200">
+                        <td className="px-4 py-3 align-top">
+                          Precise location (foreground — members)
+                        </td>
+                        <td className="px-4 py-3 align-top">
+                          Locating you on the course for order delivery
+                        </td>
+                        <td className="px-4 py-3 align-top">Yes</td>
+                      </tr>
+                      <tr className="border-b border-silver-200">
+                        <td className="px-4 py-3 align-top">
+                          Precise location (background — delivery staff)
+                        </td>
+                        <td className="px-4 py-3 align-top">
+                          Order routing, dispatch, ETAs, and delivery confirmation
+                          during active shifts
+                        </td>
+                        <td className="px-4 py-3 align-top">Yes</td>
+                      </tr>
+                      <tr className="border-b border-silver-200">
+                        <td className="px-4 py-3 align-top">
+                          Payment info
+                        </td>
+                        <td className="px-4 py-3 align-top">
+                          Processing purchases (handled by Stripe; card numbers not
+                          stored on our servers)
+                        </td>
+                        <td className="px-4 py-3 align-top">Yes</td>
+                      </tr>
+                      <tr className="border-b border-silver-200">
+                        <td className="px-4 py-3 align-top">
+                          Purchase history
+                        </td>
+                        <td className="px-4 py-3 align-top">
+                          Order fulfillment, receipts, and customer support
+                        </td>
+                        <td className="px-4 py-3 align-top">Yes</td>
+                      </tr>
+                      <tr className="border-b border-silver-200">
+                        <td className="px-4 py-3 align-top">
+                          Push notification tokens
+                        </td>
+                        <td className="px-4 py-3 align-top">
+                          Delivering order, account, and facility notifications
+                        </td>
+                        <td className="px-4 py-3 align-top">Yes</td>
+                      </tr>
+                      <tr className="border-b border-silver-200">
+                        <td className="px-4 py-3 align-top">
+                          Product interaction / analytics events
+                        </td>
+                        <td className="px-4 py-3 align-top">
+                          Improving features, diagnosing issues, measuring performance
+                          (via PostHog)
+                        </td>
+                        <td className="px-4 py-3 align-top">
+                          Yes (pseudonymous identifier)
+                        </td>
+                      </tr>
+                      <tr className="border-b border-silver-200">
+                        <td className="px-4 py-3 align-top">
+                          Device and diagnostic data
+                        </td>
+                        <td className="px-4 py-3 align-top">
+                          App stability, crash reporting, security
+                        </td>
+                        <td className="px-4 py-3 align-top">Yes</td>
+                      </tr>
+                      <tr>
+                        <td className="px-4 py-3 align-top">
+                          Approximate location (IP-derived)
+                        </td>
+                        <td className="px-4 py-3 align-top">
+                          Analytics and fraud prevention
+                        </td>
+                        <td className="px-4 py-3 align-top">Yes</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p className="mt-4 text-ink-600">
+                  We do not use your data for third-party advertising or cross-app
+                  tracking, and we do not sell your personal information.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="text-2xl font-display font-bold text-ink mb-4">
+                  11. Children's Privacy
                 </h2>
                 <p className="text-ink-600">
                   The Service is not directed to children under the age of 13 (or the
@@ -367,7 +565,7 @@ export default function Privacy() {
 
               <div>
                 <h2 className="text-2xl font-display font-bold text-ink mb-4">
-                  11. International Data Transfers
+                  12. International Data Transfers
                 </h2>
                 <p className="text-ink-600">
                   Your information may be processed and stored in the United States or
@@ -379,7 +577,7 @@ export default function Privacy() {
 
               <div>
                 <h2 className="text-2xl font-display font-bold text-ink mb-4">
-                  12. Changes to This Privacy Policy
+                  13. Changes to This Privacy Policy
                 </h2>
                 <p className="text-ink-600">
                   We may update this Privacy Policy from time to time. When we make
@@ -392,7 +590,7 @@ export default function Privacy() {
 
               <div>
                 <h2 className="text-2xl font-display font-bold text-ink mb-4">
-                  13. Contact Us
+                  14. Contact Us
                 </h2>
                 <p className="text-ink-600 mb-4">
                   If you have questions, concerns, or requests regarding this Privacy
