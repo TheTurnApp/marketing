@@ -43,7 +43,8 @@ export function DeleteAccountForm() {
         body: JSON.stringify({
           _subject: "Account deletion request",
           name: data.name,
-          email: data.email,
+          phone: data.phone,
+          email: data.email || "(not provided)",
           reason: data.reason || "(none provided)",
         }),
       });
@@ -117,19 +118,43 @@ export function DeleteAccountForm() {
           </div>
 
           <div className="space-y-2">
+            <Label htmlFor="phone" className="text-ink font-medium">
+              Phone number *
+            </Label>
+            <Input
+              id="phone"
+              type="tel"
+              {...register("phone")}
+              className={errors.phone ? "border-red-500" : ""}
+              placeholder="(555) 123-4567"
+            />
+            {errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone.message}</p>
+            )}
+            <p className="text-sm text-ink-500">
+              The phone number tied to your account, so we can find and verify
+              it.
+            </p>
+          </div>
+
+          <div className="space-y-2">
             <Label htmlFor="email" className="text-ink font-medium">
-              Account email *
+              Email
             </Label>
             <Input
               id="email"
               type="email"
               {...register("email")}
               className={errors.email ? "border-red-500" : ""}
-              placeholder="The email tied to your account"
+              placeholder="your.email@example.com"
             />
             {errors.email && (
               <p className="text-red-500 text-sm">{errors.email.message}</p>
             )}
+            <p className="text-sm text-ink-500">
+              Optional. We'll only use this if we can't locate your account by
+              phone.
+            </p>
           </div>
 
           <div className="space-y-2">

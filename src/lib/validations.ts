@@ -18,7 +18,11 @@ export const newsletterSchema = z.object({
 
 export const deleteAccountSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter the email tied to your account"),
+  phone: z.string().min(10, "Please enter a valid phone number"),
+  email: z.union([
+    z.literal(""),
+    z.string().email("Please enter a valid email address"),
+  ]),
   reason: z.string().optional(),
   honeypot: z.string().max(0, "Bot detected"),
 });
