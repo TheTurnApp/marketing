@@ -30,7 +30,7 @@ export default function DeleteAccount() {
     {
       icon: Mail,
       title: "Prefer to email?",
-      description: "Send your request directly to adam@trytheturn.com.",
+      description: "Send your request directly to support@trytheturn.com.",
     },
   ];
 

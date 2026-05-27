@@ -11,7 +11,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { CheckCircle, Mail } from "lucide-react";
 
-const SUPPORT_EMAIL = "adam@trytheturn.com";
+const SUPPORT_EMAIL = "support@trytheturn.com";
 
 export function DeleteAccountForm() {
   const [submitted, setSubmitted] = useState(false);
