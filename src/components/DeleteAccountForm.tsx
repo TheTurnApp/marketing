@@ -9,59 +9,69 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
-import { CheckCircle, Mail } from "lucide-react";
+import { CheckCircle, AlertCircle, Loader2 } from "lucide-react";
 
 const SUPPORT_EMAIL = "support@trytheturn.com";
+const FORMSPREE_ENDPOINT = "https://formspree.io/f/xykvlwzo";
 
 export function DeleteAccountForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<"idle" | "success" | "error">(
+    "idle"
+  );
 
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm<DeleteAccountData>({
     resolver: zodResolver(deleteAccountSchema),
   });
 
-  const onSubmit = (data: DeleteAccountData) => {
-    const subject = "Account deletion request";
-    const body = [
-      `Name: ${data.name}`,
-      `Account email: ${data.email}`,
-      "",
-      "Reason (optional):",
-      data.reason || "(none provided)",
-      "",
-      "I am requesting deletion of my account and associated personal data.",
-    ].join("\n");
+  const onSubmit = async (data: DeleteAccountData) => {
+    setIsSubmitting(true);
+    setSubmitStatus("idle");
 
-    const mailtoUrl = `mailto:${SUPPORT_EMAIL}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
+    try {
+      const response = await fetch(FORMSPREE_ENDPOINT, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          _subject: "Account deletion request",
+          name: data.name,
+          email: data.email,
+          reason: data.reason || "(none provided)",
+        }),
+      });
 
-    window.location.href = mailtoUrl;
-    setSubmitted(true);
+      if (response.ok) {
+        setSubmitStatus("success");
+        reset();
+      } else {
+        setSubmitStatus("error");
+      }
+    } catch {
+      setSubmitStatus("error");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
-  if (submitted) {
+  if (submitStatus === "success") {
     return (
       <Card>
         <CardContent className="p-8">
           <div className="flex items-start space-x-3 text-green-700 bg-green-50 p-4 rounded-lg">
             <CheckCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
             <div>
-              <p className="font-medium">Your email client should have opened.</p>
+              <p className="font-medium">Request received.</p>
               <p className="text-sm text-green-700/80 mt-1">
-                Send the message to complete your request. If nothing opened,
-                email us directly at{" "}
-                <a
-                  href={`mailto:${SUPPORT_EMAIL}`}
-                  className="underline hover:text-gold transition-colors"
-                >
-                  {SUPPORT_EMAIL}
-                </a>
-                .
+                We'll process your deletion request and confirm by email once
+                it's complete. This typically takes up to 30 days.
               </p>
             </div>
           </div>
@@ -134,21 +144,36 @@ export function DeleteAccountForm() {
             />
           </div>
 
-          <Button type="submit" className="w-full text-lg py-3">
-            <Mail className="mr-2 h-5 w-5" />
-            Submit Deletion Request
-          </Button>
+          {submitStatus === "error" && (
+            <div className="flex items-start space-x-2 text-red-600 bg-red-50 p-4 rounded-lg">
+              <AlertCircle className="h-5 w-5 mt-0.5 flex-shrink-0" />
+              <span className="text-sm">
+                Something went wrong. Please try again or email us directly at{" "}
+                <a
+                  href={`mailto:${SUPPORT_EMAIL}`}
+                  className="underline hover:text-red-800 transition-colors"
+                >
+                  {SUPPORT_EMAIL}
+                </a>
+                .
+              </span>
+            </div>
+          )}
 
-          <p className="text-sm text-ink-500 text-center">
-            Submitting will open your email client with a prefilled message to{" "}
-            <a
-              href={`mailto:${SUPPORT_EMAIL}`}
-              className="underline hover:text-gold transition-colors"
-            >
-              {SUPPORT_EMAIL}
-            </a>
-            .
-          </p>
+          <Button
+            type="submit"
+            disabled={isSubmitting}
+            className="w-full text-lg py-3"
+          >
+            {isSubmitting ? (
+              <>
+                <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                Submitting...
+              </>
+            ) : (
+              "Submit Deletion Request"
+            )}
+          </Button>
         </form>
       </CardContent>
     </Card>
