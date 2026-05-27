@@ -13,7 +13,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email Us",
-      value: "hello@trytheturn.com",
+      value: "support@trytheturn.com",
       description: "Get in touch for general inquiries"
     },
     {

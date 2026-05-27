@@ -17,7 +17,7 @@ export function StructuredData({ type, data }: StructuredDataProps) {
         "logo": "https://trytheturn.com/logo.png",
         "contactPoint": {
           "@type": "ContactPoint",
-          "email": "hello@trytheturn.com",
+          "email": "support@trytheturn.com",
           "contactType": "customer service",
           "availableLanguage": "English"
         },

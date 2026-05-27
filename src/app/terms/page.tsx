@@ -66,10 +66,10 @@ export default function Terms() {
                   your account credentials and for all activity that occurs
                   under your account. Notify us immediately at{" "}
                   <a
-                    href="mailto:hello@trytheturn.com"
+                    href="mailto:support@trytheturn.com"
                     className="text-ink underline hover:text-gold transition-colors"
                   >
-                    hello@trytheturn.com
+                    support@trytheturn.com
                   </a>{" "}
                   of any unauthorized use. We may suspend or terminate accounts
                   that violate these Terms or that we reasonably believe pose a
@@ -448,10 +448,10 @@ export default function Terms() {
                   Before filing a claim, you agree to try to resolve the
                   dispute informally by emailing us at{" "}
                   <a
-                    href="mailto:hello@trytheturn.com"
+                    href="mailto:support@trytheturn.com"
                     className="text-ink underline hover:text-gold transition-colors"
                   >
-                    hello@trytheturn.com
+                    support@trytheturn.com
                   </a>{" "}
                   with a description of the dispute and the relief you seek. We
                   will attempt to resolve the dispute in good faith within
@@ -514,10 +514,10 @@ export default function Terms() {
                   You may opt out of the arbitration agreement and class-action
                   waiver by sending written notice to{" "}
                   <a
-                    href="mailto:hello@trytheturn.com"
+                    href="mailto:support@trytheturn.com"
                     className="text-ink underline hover:text-gold transition-colors"
                   >
-                    hello@trytheturn.com
+                    support@trytheturn.com
                   </a>{" "}
                   within thirty (30) days of first accepting these Terms.
                   Opting out will not affect any other provision of these
@@ -611,10 +611,10 @@ export default function Terms() {
                     <br />
                     Email:{" "}
                     <a
-                      href="mailto:hello@trytheturn.com"
+                      href="mailto:support@trytheturn.com"
                       className="text-ink underline hover:text-gold transition-colors"
                     >
-                      hello@trytheturn.com
+                      support@trytheturn.com
                     </a>
                   </p>
                   <p className="mt-4 text-ink-600">

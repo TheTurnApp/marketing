@@ -88,7 +88,7 @@ export function Footer() {
               </div>
             </div>
             <div className="mt-4 md:mt-0 text-silver-300">
-              <p className="text-sm">hello@trytheturn.com</p>
+              <p className="text-sm">support@trytheturn.com</p>
             </div>
           </div>
         </div>

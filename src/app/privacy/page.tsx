@@ -211,10 +211,10 @@ export default function Privacy() {
                 <p className="mt-4 text-ink-600">
                   To exercise these rights, contact us at{" "}
                   <a
-                    href="mailto:hello@trytheturn.com"
+                    href="mailto:support@trytheturn.com"
                     className="text-ink underline hover:text-gold transition-colors"
                   >
-                    hello@trytheturn.com
+                    support@trytheturn.com
                   </a>
                   .
                 </p>
@@ -297,10 +297,10 @@ export default function Privacy() {
                   . You can opt out of analytics tracking by enabling Do Not Track in
                   your browser or by contacting us at{" "}
                   <a
-                    href="mailto:hello@trytheturn.com"
+                    href="mailto:support@trytheturn.com"
                     className="text-ink underline hover:text-gold transition-colors"
                   >
-                    hello@trytheturn.com
+                    support@trytheturn.com
                   </a>
                   .
                 </p>
@@ -404,10 +404,10 @@ export default function Privacy() {
                     <br />
                     Email:{" "}
                     <a
-                      href="mailto:hello@trytheturn.com"
+                      href="mailto:support@trytheturn.com"
                       className="text-ink underline hover:text-gold transition-colors"
                     >
-                      hello@trytheturn.com
+                      support@trytheturn.com
                     </a>
                   </p>
                   <p className="mt-4 text-ink-600">
