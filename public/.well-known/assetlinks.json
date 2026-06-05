@@ -4,7 +4,7 @@
     "target": {
       "namespace": "android_app",
       "package_name": "com.trytheturn.golfer",
-      "sha256_cert_fingerprints": ["REPLACE_WITH_ANDROID_SHA256_FINGERPRINT"]
+      "sha256_cert_fingerprints": ["04:A2:B0:EF:3E:42:1F:C5:FA:A2:F6:89:95:78:55:73:1F:20:60:A3:AD:97:DF:2E:21:E6:FD:11:DC:CD:AF:91"]
     }
   }
 ]
